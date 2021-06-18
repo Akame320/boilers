@@ -1,0 +1,104 @@
+.reviews {
+  position: relative;
+
+  &__title span {
+
+  }
+
+  .title span {
+    // Max-width: 1500px
+    @media screen and (max-width: 1600px) {
+      display: none;
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+    max-width: 90%;
+
+    // Max-width: 500px
+    @media screen and (max-width: 500px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .pos-a {
+    max-width: 1440 / 1920 * 100%;
+    position: relative;
+    
+    // Max-width: 500px
+    @media screen and (max-width: 500px) { 
+        max-width: 100%;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    z-index: 1000;
+    display: block !important;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    // Max-width: 1200px
+    @media screen and (max-width: 1200px) {
+      width: 35px;
+    }
+
+    // Max-width: 500px
+    @media screen and (max-width: 500px) {
+      display: none!important;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .arrow.next {
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%);
+
+    &:hover {
+      transform: translate(0, -50%) scale(1.2);
+    }
+  }
+
+  .arrow.prev {
+    left: 0;
+    transform: translate(0, -50%) scaleX(-1);
+
+    &:hover {
+      transform: translate(0, -50%) scaleX(-1.2) scaleY(1.2);
+    }
+  }
+
+  &__slider {
+
+    &,
+    & * {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  &__slider-item {
+    padding: 0 60px;
+
+    // Max-width: 1400px
+    @media screen and (max-width: 1600px) {
+      padding: 0 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

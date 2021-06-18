@@ -1,0 +1,100 @@
+.consultation--big {
+  width: 100%;
+  max-width: none;
+
+  margin-top: 100px;
+
+  border-radius: 0;
+
+  position: relative;
+
+  transform: translate(0, 0);
+
+  background: url("../../img/consultation/bg.jpg") center no-repeat;
+  background-size: cover;
+
+  // Max-width: 750px
+  @media screen and (max-width: 750px) {
+    margin-top: 70px;
+  }
+
+  // Max-width: 500px
+  @media screen and (max-width: 500px) {
+    margin-top: 50px;
+  }
+
+  .consultation__title {
+    //font-size: 3rem;
+
+    margin-bottom: 25 / 30 * 1em;
+
+    color: white;
+
+    // Max-width: 750px
+    @media screen and (max-width: 750px) {
+      text-align: center;
+      max-width: 530px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 22px;
+
+      br {
+        display: none;
+      }
+    }
+
+    // Max-width: 500px
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+    }
+  }
+
+  .input-wrapper {
+    // Max-width: 750px
+    @media screen and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      margin: 0 10px 10px 10px;
+
+      // Max-width: 900px
+      @media screen and (max-width: 900px) {
+        margin: 0 6px 6px 6px;
+      }
+
+      // Max-width: 750px
+      @media screen and (max-width: 750px) {
+        margin: 0 0 15px 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  .input-text {
+
+    // Max-width: 900px
+    @media screen and (max-width: 900px) {
+      max-width: 200px;
+    }
+
+    // Max-width: 750px
+    @media screen and (max-width: 750px) {
+      max-width: 500px;
+    }
+
+    // Max-width: 500px
+    @media screen and (max-width: 500px) {
+      font-size: 15px;
+      max-width: 250px;
+    }
+  }
+}

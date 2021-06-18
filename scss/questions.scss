@@ -1,0 +1,207 @@
+.questions {
+
+  &__title {
+    margin-bottom: 0;
+
+    span{
+      /*max-width 500px*/
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+  }
+
+  .questions__container{
+    /*max-width 500px*/
+    @media screen and (max-width: 500px) {
+      margin-top: 30px;
+    }
+  }
+
+  .questions__subtitle {
+    display: block;
+    color: #23282c;
+    font-size: 2.4rem;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 119px;
+    padding-bottom: 0;
+
+    /*max-width 1300px*/
+    @media screen and (max-width: 1300px) {
+      font-size: 1.9rem;
+      padding-left: 70px;
+      margin-top: 0;
+    }
+
+    /*max-width 750px*/
+    @media screen and (max-width: 750px) {
+      font-size: 1.7rem;
+    }
+
+    /*max-width 500px*/
+    @media screen and (max-width: 500px) {
+      font-size: 1.3rem;
+      padding-left: 50px;
+      padding-top: 10px;
+    }
+  }
+
+  &__container {
+    margin-top: 50px;
+  }
+
+  &__row-wrapper {
+    margin: 10px 0;
+    border-radius: 50px;
+    box-shadow: 0px 0px 24px 0px rgba(0, 23, 53, 0.14);
+    overflow: hidden;
+
+    @media screen and (max-width: 750px) {
+      border-radius: 25px;
+    }
+  }
+
+  &__row-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &.active{
+      .arrow-wrapper:after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .arrow-wrapper:before {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    font-family: "RB";
+    color: #113d75;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    height: 100%;
+    padding: 25px 45px;
+
+    /*max-width 1200px*/
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+    }
+
+    /*max-width 900px*/
+    @media screen and (max-width: 900px) {
+      font-size: 1.8rem;
+    }
+
+    /*max-width 750px*/
+    @media screen and (max-width: 750px) {
+      font-size: 1.6rem;
+      padding-left: 15px;
+      padding-right: 20px;
+    }
+  }
+
+  .questions__line {
+    width: 99%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    border: 2px dashed #113d75;
+    height: 2px;
+    font-size: 0;
+  }
+
+  .arrow-wrapper {
+    color: #113d75;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: 10;
+    padding-left: 45px;
+    font-size: 0;
+    width: 100px;
+
+    /*max-width 750px*/
+    @media screen and (max-width: 750px) {
+      width: 50px;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+
+      width: 10px; //ssss
+      height: 2px;
+
+      background-color: #113d75;
+
+      display: block;
+
+      position: absolute;
+      left: auto;
+      top: 50%;
+      z-index: 1000;
+      transform: translateY(-50%);
+
+      transition: all 0.3s linear;
+    }
+
+    &:after {
+      right: 50px;
+      transform: translateY(-50%) rotate(-45deg);
+      /*max-width 750px*/
+      @media screen and (max-width: 750px) {
+        right: 25px;
+      }
+    }
+
+    &:before {
+      right: 57px;
+      transform: translateY(-50%) rotate(45deg);
+
+      /*max-width 750px*/
+      @media screen and (max-width: 750px) {
+        right: 32px;
+      }
+    }
+  }
+
+  &__row-body {
+    display: none;
+    font-size: 2rem;
+    margin-top: 10px;
+    padding-left: 45px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    color: #23282c;
+
+    /*max-width 1200px*/
+    @media screen and (max-width: 1200px) {
+      font-size: 1.7rem;
+    }
+
+    /*max-width 900px*/
+    @media screen and (max-width: 900px) {
+      font-size: 1.5rem;
+    }
+
+    /*max-width 750px*/
+    @media screen and (max-width: 750px) {
+      font-size: 1.4rem;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
